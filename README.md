@@ -1,76 +1,86 @@
-# U-Fund:  National Non-Profit That Provides Temporary Housing to Cancer Patients
-# Modify this document to expand any and all sections that are applicable for a better understanding from your users/testers/collaborators (remove this comment and other instructions areas for your FINAL release)
 
-An online U-Fund system built in Java 17=> and ___ _replace with other platform requirements_ ___
+# **U-Fund Volunteer Management System**
+
+**Overview**  
+The U-Fund Volunteer Management System is a web application built for Aspiration Cottage, a fictional non-profit providing temporary housing for cancer patients. It connects volunteers (Helpers) with the organization, managing volunteer opportunities (needs), scheduling, and donations.
+
+**Key Features**  
+- **Admin**: Create, edit, and delete volunteer opportunities (needs).  
+- **Helper**: Browse, add needs to their basket, and schedule commitments.  
+- **Donation**: Helpers can donate money directly to the platform.  
+- **Dashboard**: A central hub to track volunteer commitments with a 14-day calendar view.
+
+**Architecture**  
+The application follows a **Model-View-ViewModel (MVVM)** architecture:
+- **Model**: Manages data related to users, needs, and donations.
+- **ViewModel**: Handles business logic and communicates with the back-end services.
+- **View**: Built with **Angular** for a single-page application (SPA) providing an intuitive interface.
+
+**Tech Stack**  
+- **Front-End**: Angular, TypeScript, HTML, CSS  
+- **Back-End**: Java, Spring Boot, REST API  
+- **Database**: MySQL  
+- **Testing**: Unit tests with **JUnit** and **Jacoco** for code coverage.
+
+**Getting Started**  
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/itzme170605/VolunterManagement.git
+   cd VolunterManagement
+   ```
+2. **Backend**:  
+   - Install dependencies and run the backend:
+     ```bash
+     mvn compile exec:java
+     ```
+   - Access the backend on `http://localhost:8080/`.
+
+3. **Frontend**:  
+   - Navigate to the `angular/` directory.
+   - Run the Angular app:
+     ```bash
+     ng serve
+     ```
+   - Access the frontend on `http://localhost:4200/`.
+
+**User Types & Workflows**  
+- **Admins**: Can create, update, or delete volunteer opportunities, and manage all user data.
+- **Helpers (Volunteers)**: Can browse opportunities, add them to their basket, check out, and track their schedules. Helpers can also donate money directly through the platform.
+
+**Features for Volunteers**  
+- **Helper Dashboard**: Shows current and upcoming volunteer opportunities.  
+- **Basket**: Add multiple needs to the basket and check them out to schedule.  
+- **Calendar View**: Helps volunteers manage their schedule for upcoming commitments.  
+- **Donation**: Ability to make monetary contributions to Aspiration Cottage.
+
+**Features for Admins**  
+- **Needs Management**: Create, update, or remove volunteer opportunities.  
+- **Volunteer Tracking**: Monitor which volunteers have committed to which needs.
+
+**Enhancements**  
+- **Donation Tracking**: Helpers' past donations are saved, making it easier to track their contributions.
+- **Calendar for Helpers**: A view to track all scheduled volunteer commitments for the upcoming weeks.
+
+**Application Domain**  
+- **Admin**: Manages volunteer needs and tracks user activities.
+- **Helper**: Participates in volunteer activities and tracks their involvement.
+
+**Key Components**  
+- **LoginComponent**: User login for both Admin and Helper.  
+- **DashboardComponent**: Central page for Helpers, showing needs and upcoming events.
+- **EditCupboardComponent**: Admin page to edit, create, and remove volunteer needs.
+- **DonateComponent**: Allows Helpers to donate to Aspiration Cottage.
+- **BasketComponent**: Allows Helpers to add needs to their basket for checkout.
+
+**Development Notes**  
+- **Code Design**: Followed **OO principles** like **encapsulation**, **inheritance**, and **low coupling** to ensure maintainable and modular code.
+- **RESTful Architecture**: Designed with REST API endpoints to interact with the database and frontend, ensuring a clear separation between front-end and back-end logic.
+- **Unit Testing**: Focused on ensuring backend functionality with JUnit tests, achieving **85%+** code coverage using Jacoco.
+
+**Future Improvements**  
+- **Code Optimization**: The app will undergo performance optimizations to ensure better handling of data retrieval.
+- **UI/UX Enhancements**: The user interface will be further improved with CSS, providing a more visually appealing and interactive experience.
   
-## Team
+**License**: MIT License
 
-- Krysten Guerrero
-- Nathan Stankus
-- Noah Rousseau
-- Jatin Jain
-
-## Prerequisites
-
-- Java 11=>17 (Make sure to have correct JAVA_HOME setup in your environment)
-- Maven
--  _add any other tech stack requirements_
-
-
-## How to run it
-
-1. Clone the repository and go to the root directory.
-2. Execute `mvn compile exec:java`
-3. Open in your browser `http://localhost:8080/`
-4.  _add any other steps required or examples of how to use/run_
-
-## Known bugs and disclaimers
-(It may be the case that your implementation is not perfect.)
-
-Document any known bug or nuisance.
-If any shortcomings, make clear what these are and where they are located.
-
-## How to test it
-
-The Maven build script provides hooks for run unit tests and generate code coverage
-reports in HTML.
-
-To run tests on all tiers together do this:
-
-1. Execute `mvn clean test jacoco:report`
-2. Open in your browser the file at `PROJECT_API_HOME/target/site/jacoco/index.html`
-
-To run tests on a single tier do this:
-
-1. Execute `mvn clean test-compile surefire:test@tier jacoco:report@tier` where `tier` is one of `controller`, `model`, `persistence`
-2. Open in your browser the file at `PROJECT_API_HOME/target/site/jacoco/{controller, model, persistence}/index.html`
-
-To run tests on all the tiers in isolation do this:
-
-1. Execute `mvn exec:exec@tests-and-coverage`
-2. To view the Controller tier tests open in your browser the file at `PROJECT_API_HOME/target/site/jacoco/model/index.html`
-3. To view the Model tier tests open in your browser the file at `PROJECT_API_HOME/target/site/jacoco/model/index.html`
-4. To view the Persistence tier tests open in your browser the file at `PROJECT_API_HOME/target/site/jacoco/model/index.html`
-
-*(Consider using `mvn clean verify` to attest you have reached the target threshold for coverage)
-  
-  
-## How to generate the Design documentation PDF
-
-1. Access the `PROJECT_DOCS_HOME/` directory
-2. Execute `mvn exec:exec@docs`
-3. The generated PDF will be in `PROJECT_DOCS_HOME/` directory
-
-
-## How to setup/run/test program 
-1. Tester, first obtain the Acceptance Test plan
-2. IP address of target machine running the app
-3. Execute ________
-4. ...
-5. ...
-
-## License
-
-MIT License
-
-See LICENSE for details.
+---
