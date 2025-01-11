@@ -1,0 +1,96 @@
++-----------------------+
+|        User           |<-------------------------------+
++-----------------------+                                |
+| - userName: String    |                                |
+| - password: String    |                                |
+| - manager: boolean    |                                |
++-----------------------+                                |
+| + getUserName(): String|                               |
+| + setUserName()       |                                |
+| + getPassword()       |                                |
+| + setPassword()       |                                |
+| + authenticate()      |                                |
+| + isManager()         | (abstract)                     |
++-----------------------+                               |
+         ^                                              |
+         |                                              |
+         |                                              |
++--------+--------+                             +--------+--------+
+|    Helper      |                             |     Manager     |
++----------------+                             +-----------------+
+| - email: String|                             | + isManager(): boolean|
+| - phoneNumber: String                        +-----------------+
+| - location: String|
+| - basket: ArrayList<Need> |
+| - schedule: List<ScheduleItem> |
+| - donated: int   |
++------------------+
+| + getDonated()  |
+| + setDonated()  |
+| + getSchedule() |
+| + addNeedToBasket()|
+| + removeNeedFromBasket()|
+| + checkout()    |
++------------------+
+        ^
+        |
+        | 1..*  
++-----------------------+
+|        Need           |
++-----------------------+
+| - id: int             |
+| - name: String        |
+| - facility: String    |
+| - description: String |
+| - datetime: String    |
+| - active: boolean     |
+| - required: int       |
+| - volunteers: ArrayList<String> |
+| - volunteerCount: int |
++-----------------------+
+| + getId()             |
+| + setId()             |
+| + addVolunteer()      |
+| + removeVolunteer()   |
++-----------------------+
+        ^ 
+        |
+     many-to-many
+        |
++----------------------+
+|     User (volunteers) |
++----------------------+
+
++----------------------+
+|   ScheduleItem       |
++----------------------+
+| - need: Need         |
+| - dateTime: Date     |
++----------------------+
+| + getNeed()          |
+| + setNeed()          |
+| + getDateTime()      |
+| + setDateTime()      |
++----------------------+
+
++---------------------------+        +----------------------+
+|      NeedController        |<>------|     INeedService     |
++---------------------------+        +----------------------+
+| + getNeed()                |
+| + getNeeds()               |
+| + searchNeeds()            |
+| + deleteNeed()             |
+| + updateNeed()             |
+| + createNeed()             |
++---------------------------+
+
++---------------------------+        +----------------------+
+|      UserController        |<>------|     IUserService     |
++---------------------------+        +----------------------+
+| + getUsers()               |
+| + getUser()                |
+| + createUser()             |
+| + updateUser()             |
+| + deleteUser()             |
+| + login()                  |
++---------------------------+

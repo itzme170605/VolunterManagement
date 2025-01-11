@@ -1,0 +1,36 @@
+<div id="search-component">
+    <input 
+    #searchBox id="search-box" 
+    [(ngModel)]="searchTerm"
+    placeholder="Search for a volunteer opportunity near you!"/>
+
+    <button type="submit" (click)="search()">Search</button>
+
+    <div class="flex-container">
+        <div id="need-box" *ngFor="let need of (needs$ | async)">
+            <h3>{{need.name}}</h3>
+
+            <div id="need-info">
+                <div id="description">{{need.description}}</div>
+                <div id="line">{{need.facility}}</div>
+                <div id="line">{{need.datetime}}</div>
+                <div id="line">Volunteers: {{need.volunteerCount||0}}/{{need.required}}</div>
+            </div>
+
+            <button 
+                id="basket-button"
+                (click)="addToBasket(need)">
+                Add to Basket
+            </button>
+        </div>
+    </div>
+
+    <div *ngIf="(needs$ | async)?.length === 0">
+        <h5>No matching results, sorry! Come back later for more volunteer opportunities.</h5>
+    </div>
+    <div>
+        {{message}}
+    </div>
+</div>
+
+<div></div>

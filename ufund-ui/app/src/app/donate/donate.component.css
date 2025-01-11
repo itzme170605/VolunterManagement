@@ -1,0 +1,66 @@
+.donate-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.current-donation h1 {
+  font-size: 24px;
+  color: #4caf50;
+}
+
+.donation-amount {
+  font-size: 36px;
+  color: #4caf50;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.pledge-form {
+  margin-top: 20px;
+}
+
+.pledge-form h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.pledge-form label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.pledge-form input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.pledge-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pledge-form button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.pledge-form button:hover:enabled {
+  background-color: #388e3c;
+}

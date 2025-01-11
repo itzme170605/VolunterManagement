@@ -1,0 +1,21 @@
+<div class="schedule-container">
+  <h2>Current Schedule</h2>
+  <div *ngIf="scheduledNeeds.length > 0">
+    <ul class="basket-list">
+      <li *ngFor="let item of scheduledNeeds" class="basket-item">
+        <div class="basket-item-content">
+          <a [routerLink]="['/needs-helper', item.need.id]" class="basket-item-link">
+            {{ item.need.name }}
+          </a>
+          <span>- Scheduled on {{ item.dateTime | date:'short' }}</span>
+        </div>
+        <button class="remove-button" (click)="removeFromSchedule(item.need)">
+          Request Cancellation
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="scheduledNeeds.length === 0" class="empty-basket">
+    <p>Your basket is empty.</p>
+  </div>
+</div>

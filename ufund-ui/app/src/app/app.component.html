@@ -1,0 +1,17 @@
+<div id="header">
+    <h1>{{title}}</h1>
+    <nav>
+        <a *ngIf="!isAdmin" routerLink="/dashboard">Dashboard</a>
+        <a *ngIf="!isAdmin" routerLink="/basket">Basket</a>
+        <a *ngIf="!isAdmin" routerLink="/schedule">Schedule</a>
+        <a *ngIf="!isAdmin" routerLink="/donate">Donate$</a>
+
+    <button *ngIf="!isLoggedIn" class="login-button" (click)="logout()">Login</button>
+
+    <!-- Show Logout button if user is logged in -->
+    <button *ngIf="isLoggedIn" class="logout-button" (click)="logout()">Logout</button>
+    </nav>
+</div>
+
+<router-outlet></router-outlet>
+

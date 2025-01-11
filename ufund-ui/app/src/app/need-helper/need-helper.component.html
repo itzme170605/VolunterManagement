@@ -1,0 +1,47 @@
+<button type="button" (click)="goBack()">Back</button>
+
+
+<div *ngIf="need">
+    <h2>{{need.name}}</h2>
+
+    <div id="edit-need-name">
+      <label for="edit-need-name">Name: </label> 
+      <input 
+      #needName id="edit-need-name" 
+      [(ngModel)]="need.name"
+      />
+    </div>
+
+    <div id="edit-need-facility">
+      <label for="edit-need-facility">Facility: </label> 
+      <input 
+      #needFacility id="edit-need-facility" 
+      [(ngModel)]="need.facility"
+      />
+    </div>
+
+    <div id="edit-need-description">
+      <label for="edit-need-description">Description: </label> 
+      <input 
+      #needDescription id="edit-need-description" 
+      [(ngModel)]="need.description"
+      />
+    </div>
+
+    <div id="edit-need-datetime">
+      <label for="edit-need-datetime">Datetime: </label> 
+      <input 
+      #needDatetime id="edit-need-datetime" 
+      [(ngModel)]="need.datetime"
+      />
+    </div>
+
+    <div id="edit-need-required">
+      <label for="edit-need-required">Required: </label> 
+      <input 
+      #needRequired id="edit-need-required" 
+      [(ngModel)]="need.required"
+      />
+    </div>
+</div>
+

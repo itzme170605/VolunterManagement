@@ -1,0 +1,49 @@
+label {
+    color: #435960;
+    font-weight: bold;
+
+    text-align: right;
+    width: 100px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  input {
+    font-size: 1em;
+
+    width: 50rem;
+    padding: .4rem;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+  }
+
+  button {
+    margin-top: 20px;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  button:hover {
+    background-color: #cfd8dc;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+  }
+
+  button[type="submit"] {
+    margin-left: 50rem;
+    width: 10rem;
+
+    background-color: white;
+    border-color: indigo;
+  }
+
+  button:hover[type="submit"] {
+    background-color: indigo;
+    color: white;
+    font-weight: bold;
+  }

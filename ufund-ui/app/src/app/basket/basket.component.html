@@ -1,0 +1,17 @@
+<div class="basket-container">
+  <h2>Basket</h2>
+  <div *ngIf="needsInBasket.length > 0">
+    <ul class="basket-list">
+      <li *ngFor="let need of needsInBasket" class="basket-item">
+        <div class="basket-item-content">
+          <a [routerLink]="['/needs', need.id]" class="basket-item-link">{{ need.name }}</a>
+          <button class="remove-button" (click)="removeFromBasket(need)">Remove</button>
+        </div>
+      </li>
+    </ul>
+    <button class="checkout-button" (click)="checkout()">Checkout</button>
+  </div>
+  <div *ngIf="needsInBasket.length === 0" class="empty-basket">
+    <p>Your basket is empty.</p>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="donate-container">
+  <!-- Current Donation Display -->
+  <div class="current-donation">
+    <h1>Your Current Donation:</h1>
+    <h2 class="donation-amount">${{ userService.helper.donated || 0 }}</h2>
+  </div>
+
+  <!-- Pledge Form -->
+  <div class="pledge-form">
+    <h3>Pledge Your Donation</h3>
+    <form (ngSubmit)="pledgeDonation()" #donationForm="ngForm">
+      <label for="amount">Enter Amount:</label>
+      <input
+        type="number"
+        id="amount"
+        name="amount"
+        [(ngModel)]="pledgeAmount"
+        required
+        min="1"
+        placeholder="Enter amount to pledge"
+      />
+      <button type="submit" [disabled]="donationForm.invalid">Pledge</button>
+    </form>
+  </div>
+</div>

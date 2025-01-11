@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: title;
+    src: url(assets/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+    font-family: subtitle;
+    src: url(assets/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: body;
+    src: url(assets/ChanticleerRomanNF.ttf);
+}
+
+body {
+    background-color: white;
+}

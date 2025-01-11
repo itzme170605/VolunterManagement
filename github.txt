@@ -1,0 +1,35 @@
+commit 825d37b1f778e4604aedaf927448c0e440d44fb8
+Author: NoahR1024 <nir9300@rit.edu>
+Date:   Wed Sep 25 23:34:54 2024 -0400
+
+    NR Added Name
+
+commit 034f7c5ac54f1b2f9462abcd61f89037ec159598
+Author: Nathan S <89424137+spagbag03@users.noreply.github.com>
+Date:   Wed Sep 25 23:31:16 2024 -0400
+
+    Update README.md
+
+commit 9b03d36a8aa096af6c32521d6b406911def4b3f7
+Author: krystensoup <143670948+krystensoup@users.noreply.github.com>
+Date:   Wed Sep 25 23:20:29 2024 -0400
+
+    Krysten added name
+
+commit 8176534c1b8082dd62b6f0ec66160e2015e4e99b
+Author: krystensoup <143670948+krystensoup@users.noreply.github.com>
+Date:   Wed Sep 25 23:19:08 2024 -0400
+
+    Revert Changes
+
+commit 3bb94c4e248cfa6dae39dabdefd66a44483f2c9d
+Author: krystensoup <143670948+krystensoup@users.noreply.github.com>
+Date:   Wed Sep 25 23:07:50 2024 -0400
+
+    Update README.md
+
+commit 2486db47f6cfbccade3cfd4c9032a7000d41ab54
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Mon Sep 23 20:31:07 2024 +0000
+
+    Initial commit

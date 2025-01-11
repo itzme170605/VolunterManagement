@@ -1,0 +1,63 @@
+input
+{
+    width:400px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+button
+{
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+
+    background-color: white;
+    border-color: indigo;
+}
+
+button:hover
+{
+    padding-left: 12px;
+    padding-right: 12px;
+
+    background-color: indigo;
+    color: white;
+    font-weight: bold;
+}
+
+.flex-container 
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#need-box 
+{
+    margin-top: 30px;
+    margin-right: 20px;
+
+    width: 15rem;
+    padding: 10px;
+    border-radius: 7px;
+
+    border: 2px solid black;
+
+    text-align: center;
+}
+
+#description
+{
+    margin-bottom: 20px;
+    min-height: 100px;
+    text-align: left;
+}
+
+#line
+{
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 2rem;
+}
